@@ -1,12 +1,14 @@
 body{
     font-family: 'Roboto', sans-serif;
     margin:0;
+    min-width:370px;
+    max-width:1980px;
 }
 .spinner_container{
     position:fixed;
     width:100%;
     height:100vh;
-    background-color:rgba(0,0,0,0.5);
+    background-color:rgba(255,255,255,0.9);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -22,38 +24,59 @@ body{
     justify-content:space-between;
 }
 @keyframes disapear{
-    0%{width:100%;}
+    0%{width:100%}
     99%{width:100%}
     100%{width:0}
 }
-@keyframes spin{
-    0%{opacity:1}
-    50%{opacity:0.1}
-    100%{opacity:1}
+@keyframes spin1{
+    0%{transform:scale(1);transform:translate(0px,0px);opacity:1}
+    10%{transform:scale(1.1);transform:translate(0px,-10px);opacity:0.8}
+    20%{transform:scale(1);transform:translate(0px,0px);opacity:1}
+}
+@keyframes spin2{
+    20%{transform:scale(1);opacity:1;transform:translate(0px,0px)}
+    30%{transform:scale(1.1);transform:translate(0px,-10px);opacity:0.5}
+    40%{transform:scale(1);opacity:1;transform:translate(0px,0px)}
+}
+@keyframes spin3{
+    40%{transform:scale(1);transform:translate(0px,0px)}
+    50%{transform:scale(1.1);transform:translate(0px,-10px);opacity:0.8}
+    60%{transform:scale(1);transform:translate(0px,0px)}
+}
+@keyframes spin4{
+    60%{transform:scale(1);transform:translate(0px,0px)}
+    70%{transform:scale(1.1);transform:translate(0px,-10px);opacity:0.8}
+    80%{transform:scale(1);transform:translate(0px,0px)}
+}
+@keyframes spin5{
+    80%{transform:scale(1);transform:translate(0px,0px)}
+    90%{transform:scale(1.1);transform:translate(0px,-10px);opacity:0.8}
+    100%{transform:scale(1);transform:translate(0px,0px)}
 }
 .spinner_element{
     width:50px;
     height:50px;
     background:linear-gradient(70deg, #9356DC, #ff8bde);
-    animation-name:spin;
-    animation-duration:500ms;
+    animation-duration:2100ms;
+    animation-fill-mode:both;
     border-radius:25px;
     animation-iteration-count: infinite;
 }
 #spin0{
-    animation-delay:6s
+    animation-name:spin1;
+    /* animation-duration:4500ms; */
 }
 #spin1{
-    animation-delay:2s
+    animation-name:spin2;
 }
 #spin2{
-    animation-delay:3s
+    animation-name:spin3;
 }
 #spin3{
-    animation-delay:4s
+    animation-name:spin4;
 }
 #spin4{
-    animation-delay:5s
+    animation-name:spin5;
 }
 header{
     height:50px;
