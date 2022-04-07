@@ -5,6 +5,15 @@ body{
 }
 .header-previous-arrow{
     position:absolute;
+    padding:0 25px;
+}
+.header-previous-arrow > a{
+    color:black;
+}
+:is(.header-previous-arrow > a):hover{
+    background: -webkit-linear-gradient(#9356DC,#FF79DA );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 header{
     height:50px;
@@ -17,7 +26,6 @@ header{
 #logo{
     margin:10px 0;
 }
-
 /*Content*/
 .menu_img_container{
     width:100%;
@@ -42,6 +50,23 @@ header{
     padding: 0 40px 0 15px;
     display:flex;
     justify-content:space-between;
+    position:relative;
+}
+.first_heart{
+    position:absolute;
+    right:40px;
+    color:black;
+    background-color:#f5f5f5;
+    cursor:pointer;
+    transition:opacity 500ms;
+}
+.first_heart:hover{
+    opacity:0;
+}
+.second-heart{
+    background: -webkit-linear-gradient(#9356DC,#FF79DA );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .type-menu_container{
     padding: 0 15px;
@@ -88,6 +113,8 @@ header{
     background-color:white;
     display:flex;
     cursor:pointer;
+    text-overflow:ellipsis;    
+    overflow:hidden;
 }
 @keyframes roll_in{
     0%{transform: rotate(360deg)}
@@ -102,10 +129,11 @@ header{
     font-size:25px;
 }
 .menu-element_block:hover + div{
-    width:100px;
+    width:100px !important;
     animation-name:roll_in;
     animation-duration:500ms;
     animation-play-state:running;
+    overflow:hidden;
 }
 .menu_element2{
     animation-delay:200ms;
@@ -116,14 +144,20 @@ header{
 .menu-element_txt{
     padding:15px ;
     width:85%;
+    overflow:hidden;
 
 }
 .menu_title{
     font-weight:bold;
     margin:0;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space: nowrap;
 }
 .menu_desc{
-
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
 }
 .menu-element_price{
     width:15%;
@@ -175,4 +209,52 @@ footer{
     margin:0 10px 0 0;
     width:20px;
     text-align:center
+}
+
+@media only screen and (min-width:769px){
+    header{
+        padding:10px 0;
+    }
+    main{
+        display:flex;
+    }
+    .menu_img-container{
+        height:100vh;
+        overflow:hidden;
+        display:flex;
+        justify-content:center;
+    }
+    .menu_img-container > img{
+        height:100%;
+        width:auto;
+    }
+    .menu_parent-container{
+        position:absolute;
+        top:auto;
+        right:0;
+        height:100vh;
+        width:40%;
+        box-sizing:border-box;
+        border-radius:20px 0 0 20px;
+        overflow:scroll;
+    }
+    .menu_parent-container::-webkit-scrollbar{
+        position:absolute;
+        width:7px;
+    }
+    .menu_parent-container::-webkit-scrollbar-thumb{
+        background-color:gray;
+        border-radius:10px;
+    }
+  footer{
+      text-align:center;
+      padding:60px;
+  }
+    footer > div {
+        display:flex;
+        justify-content:center;
+    }
+    .footer_link{
+        margin:0 20px;
+    }
 }

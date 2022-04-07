@@ -1,8 +1,7 @@
 body{
     font-family: 'Roboto', sans-serif;
-    margin:0;
+    margin:0 auto;
     min-width:370px;
-    max-width:1980px;
 }
 .spinner_container{
     position:fixed;
@@ -84,7 +83,8 @@ header{
     text-align:center;
     box-shadow:0 0 5px rgba(0,0,0,0.5);
     position:relative;
-    z-index:1
+    z-index:1;
+    transition:padding 1s;
 }
 #logo{
     margin:10px 0;
@@ -133,7 +133,8 @@ header{
     background-color:#f2f2f2;
     color:gray;
     border-radius:15px;
-    padding:20px 0;
+    padding:20px 20px 20px 0;
+    box-sizing:border-box;
     margin-bottom:20px;
     cursor:pointer;
 }
@@ -215,7 +216,7 @@ a{
     font-size:25px;
     position:relative;
     background-color:white;
-    transition:color 1s, background-color 1s;
+    transition:color 500ms, background-color 500ms;
 }
 .heart-icon:hover{
     cursor:pointer;
@@ -252,4 +253,60 @@ footer{
     margin:0 10px 0 0;
     width:20px;
     text-align:center
+}
+
+@media only screen and (min-width:769px){
+    header{
+        padding:10px 0;
+    }
+    .fonctionnement-section {
+        max-width:1280px;
+        margin:auto;     
+    }
+  .fonctionnement-section > div{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+  }
+  .restaurant_section{
+      margin:30px 0 0 0;
+  }
+  .restaurant_section > div{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;    
+    max-width:1200px;
+    margin:auto;  
+  }
+  .restaurant_section > h2{
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+    margin:0 0 40px 0;
+
+  }
+  .fonctionnement_element{
+      width:33%;
+  }.restaurant_element{
+      width:45%;
+      margin:0 0 40px 0;
+  }
+  .restauraut-element_img-container{
+      height:210px;
+  }
+  .fonctionnement-element_number-container{
+      position:static;
+      margin:0 0 0 10px;
+  }
+  footer{
+      text-align:center;
+      padding:60px;
+  }
+  footer > div {
+    display:flex;
+    justify-content:center;
+}
+.footer_link{
+    margin:0 20px;
+}
 }
