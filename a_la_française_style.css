@@ -52,7 +52,7 @@ header{
     justify-content:space-between;
     position:relative;
 }
-.first_heart{
+/* .first_heart{
     position:absolute;
     right:40px;
     color:black;
@@ -67,6 +67,35 @@ header{
     background: -webkit-linear-gradient(#9356DC,#FF79DA );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+} */
+.heart-icon{
+    vertical-align:middle;
+    font-size:25px;
+    position:relative;
+    background-color:#f5f5f5;
+    transition:color 500ms, background-color 500ms;
+    color:black;
+}
+/* .heart-icon:hover{
+    cursor:pointer;
+    color:transparent;
+    background-color:transparent;
+} */
+
+.full-heart-icon{
+    display:cell;
+    vertical-align:middle;
+    font-size:25px;
+    background: -webkit-linear-gradient(#9356DC,#FF79DA );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position:absolute;
+}
+
+.heart_link:focus > .heart-icon{
+    cursor:pointer;
+    color:transparent;
+    background-color:transparent;
 }
 .type-menu_container{
     padding: 0 15px;

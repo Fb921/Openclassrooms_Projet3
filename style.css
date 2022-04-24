@@ -218,6 +218,9 @@ a{
     align-items:center;
     width:20%;
     position:relative;
+    justify-content:center;
+    box-sizing:border-box;
+    padding-right:10px;
 }
 .heart-icon{
     vertical-align:middle;
