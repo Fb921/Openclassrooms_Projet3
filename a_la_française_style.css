@@ -21,7 +21,8 @@ header{
     text-align:center;
     box-shadow:0 0 5px rgba(0,0,0,0.5);
     position:relative;
-    z-index:1
+    z-index:1;
+    background-color:white;
 }
 #logo{
     margin:10px 0;
@@ -31,6 +32,9 @@ header{
     width:100%;
     height:300px;
     overflow:hidden;
+}
+.note-img-container > img{
+    margin-top:-250px;
 }
 .menu_img{
     width:100%;
@@ -52,22 +56,6 @@ header{
     justify-content:space-between;
     position:relative;
 }
-/* .first_heart{
-    position:absolute;
-    right:40px;
-    color:black;
-    background-color:#f5f5f5;
-    cursor:pointer;
-    transition:opacity 500ms;
-}
-.first_heart:hover{
-    opacity:0;
-}
-.second-heart{
-    background: -webkit-linear-gradient(#9356DC,#FF79DA );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-} */
 .heart-icon{
     vertical-align:top;
     font-size:25px;
@@ -76,12 +64,6 @@ header{
     transition:color 500ms, background-color 500ms;
     color:black;
 }
-/* .heart-icon:hover{
-    cursor:pointer;
-    color:transparent;
-    background-color:transparent;
-} */
-
 .full-heart-icon{
     display:cell;
     vertical-align:middle;
@@ -253,9 +235,16 @@ footer{
         display:flex;
         justify-content:center;
     }
+    .note-img-container{
+        flex-direction:column;
+    }
     .menu_img-container > img{
         height:100%;
         width:auto;
+    }
+    .note-img-container > img{
+        height:auto;
+        width:100%;
     }
     .menu_parent-container{
         position:absolute;
