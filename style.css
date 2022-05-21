@@ -120,6 +120,7 @@ header{
 }
 .explorez_btn:hover{
     background:linear-gradient(165deg, #ff8bde, #ab6bfa);
+    box-shadow:0 0 5px rgba(111, 111, 111, 0.8);
 }
 .section_title{
     font-weight:bold;
@@ -245,7 +246,7 @@ a{
     position:absolute;
 }
 
-.heart_link:focus > .heart-icon{
+.heart_link:hover > .heart-icon{
     cursor:pointer;
     color:transparent;
     background-color:transparent;
